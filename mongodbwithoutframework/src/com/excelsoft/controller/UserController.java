@@ -1,6 +1,7 @@
 package com.excelsoft.controller;
 
 import com.excelsoft.dto.UserDto;
+import com.excelsoft.model.User;
 import com.excelsoft.service.UserService;
 
 import java.util.Scanner;
@@ -20,7 +21,7 @@ public class UserController {
         int choice = sc.nextInt();
 
         switch(choice){
-            case 1: {
+            case 1:
                 UserDto dto = new UserDto();
 
                 System.out.println("Enter the Student Id");
@@ -35,7 +36,25 @@ public class UserController {
 
                 UserService service = new UserService();
                 service.insertUser(service.insertUser(dto));
-            }
+                break;
+
+                case 2:
+                    System.out.println("Enter User Id");
+                    int id = sc.nextInt();
+
+                    UserService serviced = new UserService();
+                    UserDto user = serviced.getUserById(id);
+
+                    if(user != null){
+                        System.out.println("User Details");
+                        System.out.println("Id:" + user.getId());
+                        System.out.println("Name:" + user.getName());
+                        System.out.println("Email:" + user.getEmail());
+                        System.out.println("Password:" + user.getPassword());
+            }else {
+                        System.out.println("User not found");
+                    }
+                    break;
         }
     }
 }

@@ -16,4 +16,19 @@ public class UserService {
         repo.saveUser(user);
         return dto;
     }
+
+    public UserDto getUserById(int id) {
+        UserRepo repo = new UserRepo();
+        User user = repo.getUserId(id);
+        if (user != null) {
+            UserDto dto = new UserDto();
+            dto.setId(user.getId());
+            dto.setName(user.getName());
+            dto.setEmail(user.getEmail());
+            dto.setPassword(user.getPassword());
+            return dto;
+        } else {
+            return null;
+        }
+    }
 }
