@@ -33,7 +33,7 @@ public class UserRepo {
             MongoDatabase mongoDatabase = mongoClient.getDatabase("User");
             MongoCollection<Document> collection = mongoDatabase.getCollection("user");
 
-            Document query = new Document("_id", new ObjectId(String.valueOf(id)));
+            Document query = new Document("_id", new ObjectId());
             Document result = collection.find(query).first();
 
             if (result != null) {
@@ -50,6 +50,5 @@ public class UserRepo {
             e.printStackTrace();
             return null;
         }
-
-        }
+    }
 }

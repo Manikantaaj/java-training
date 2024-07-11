@@ -1,7 +1,6 @@
 package com.excelsoft.controller;
 
 import com.excelsoft.dto.UserDto;
-import com.excelsoft.model.User;
 import com.excelsoft.service.UserService;
 
 import java.util.Scanner;
@@ -11,8 +10,7 @@ public class UserController {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Welcome to Student Application");
-        System.out.println("Please Choose an option");
+        System.out.println("Choose a option");
         System.out.println("1 : Insert");
         System.out.println("2 : Get User Details");
         System.out.println("3 : Update");
@@ -24,13 +22,13 @@ public class UserController {
             case 1:
                 UserDto dto = new UserDto();
 
-                System.out.println("Enter the Student Id");
+                System.out.println("Enter the User Id");
                 dto.setId(sc.nextInt());
-                System.out.println("Enter the Student Name");
+                System.out.println("Enter the User Name");
                 dto.setName(sc.next());
-                System.out.println("Enter the Student Email");
+                System.out.println("Enter the User Email");
                 dto.setEmail(sc.next());
-                System.out.println("Enter the Student Password");
+                System.out.println("Enter the User Password");
                 dto.setPassword(sc.next());
                 sc.close();
 
