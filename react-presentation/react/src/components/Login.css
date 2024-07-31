@@ -1,0 +1,26 @@
+.bg-input {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  width: 50%;
+}
+
+.custom-button {
+  background-color: #103783;
+  border-color: #17ce91;
+  margin-top: 20px;
+  color: #eef1f5;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
